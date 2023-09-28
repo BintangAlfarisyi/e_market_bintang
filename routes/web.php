@@ -35,3 +35,5 @@ Route::get('/download', [ProdukController::class, 'download']);
 Route::get('/dashboard', [DashboardController::class, 'dashboard']);
 Route::get('/blog', [DashboardController::class, 'blog']);
 
+Route::get('generatepdf', [ProdukController::class, 'generatepdf'])->name('dpdf');
+Route::get('generateexcel', [ProdukController::class, 'generateexcel'])->name('dexcel');

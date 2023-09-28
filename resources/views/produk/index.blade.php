@@ -38,9 +38,19 @@
                     </ul>
                 </div>
                 @endif
-                <button type="button" class="btn btn-primary btn-block btn-sm" style="width:120;" data-toggle="modal" data-target="#modalFormProduk">
-                    Tambah Produk
-                </button>
+                <div style="display: flex; justify-content: space-between;">
+                    <button type="button" class="btn btn-primary btn-block btn-sm" style="width:120;" data-toggle="modal" data-target="#modalFormProduk">
+                        Tambah Produk
+                    </button>
+                    <div>
+                        <a href="{{ route('dexcel') }}">
+                            <button type="button" class="btn btn-success">Download Excel</button>
+                        </a>
+                        <a href="{{ route('dpdf') }}">
+                            <button type="button" class="btn btn-danger">Download PDF</button>
+                        </a>
+                    </div>
+                </div>
                 @include('produk.data')
             </div>
             <!-- /.card-body -->

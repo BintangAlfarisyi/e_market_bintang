@@ -2,15 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\ProdukExport;
 use App\Models\Produk;
 use App\Http\Requests\StoreProdukRequest;
 use App\Http\Requests\UpdateProdukRequest;
-use Barryvdh\DomPDF\PDF as DomPDFPDF;
+use Barryvdh\DomPDF\Facade\Pdf as PDF;
 use Exception;
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\DB;
+use Maatwebsite\Excel\Facades\Excel;
 use PDOException;
-use PDF;
 
 class ProdukController extends Controller
 {
@@ -21,13 +22,9 @@ class ProdukController extends Controller
      */
     public function index()
     {
-        try{
             $data['produk'] = Produk::orderBy('created_at', 'ASC')->get();
 
             return view('produk.index')->with($data);
-        }catch(QueryException | Exception | PDOException $error){
-            // $this->failResponse($error->getMessage(), $error->getCode());
-        }
     }
 
     /**
@@ -118,13 +115,21 @@ class ProdukController extends Controller
         }
     }
 
-    public function download()
+    public function generatepdf()
     {
         $data['produk'] = Produk::get();
-        $pdf = PDF::loadview('produk/data', $data);
+        $pdf = PDF::loadView('produk.data', $data);
+        return $pdf->download('produk.pdf');
+    }
 
-        // $date = date('YMd');
-        // return $pdf->download('produk.pdf');
-        return $pdf->stream('produk.pdf');
+
+    public function generateexcel()
+    {
+        $date = date('Y-m-d');
+        return Excel::download(new ProdukExport(), $date . 'produk.xlsx');
+
+        // $data['pengajuan'] = Pengajuan::get();
+        // $excel = Excel::loadView('pengajuan.data', $data);
+        // return $excel->download('pengajuan.xlxs');
     }
 }

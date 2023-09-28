@@ -7,7 +7,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach($pro duk as $prod)
+        @foreach($produk as $prod)
         <tr>
             <th scope="row">{{ $i = (!isset($i)?1:++$i) }}</th>
             <td>{{ $prod->nama_produk }}</td>
