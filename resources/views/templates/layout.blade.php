@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="{{ asset('adminlte3') }}/plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('adminlte3') }}/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="{{ asset('bootstrap') }}/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="{{ asset('css/custom.css') }}"> -->
     @stack('style')
 </head>
 
@@ -57,82 +59,82 @@
 
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
-                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
                 with font-awesome or any other icon font library -->
-                    <li class="nav-item">
-                        <a href="{{ url('/') }}" class="nav-link">
-                            <i class="nav-icon fas fa-home"></i>
-                            <p>
-                                Dashboard
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ url('profile') }}" class="nav-link">
-                            <i class="nav-icon fas fa-user"></i>
-                            <p>
-                                Profile
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ url('contact') }}" class="nav-link">
-                            <i class="nav-icon fas fa-address-book"></i>
-                            <p>
-                                Contact
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ url('produk') }}" class="nav-link">
-                            <i class="nav-icon fas fa-gift"></i>
-                            <p>
-                                Produk
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ url('barang') }}" class="nav-link">
-                            <i class="nav-icon fas fa-gift"></i>
-                            <p>
-                                Barang
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ url('pemasok') }}" class="nav-link">
-                            <i class="nav-icon fas fa-gift"></i>
-                            <p>
-                                Pemasok
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ url('pelanggan') }}" class="nav-link">
-                            <i class="nav-icon fas fa-gift"></i>
-                            <p>
-                                Pelanggan
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ url('user') }}" class="nav-link">
-                            <i class="nav-icon fas fa-gift"></i>
-                            <p>
-                                User
-                            </p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ url('pembelian') }}" class="nav-link">
-                            <i class="nav-icon fas fa-gift"></i>
-                            <p>
-                                Pembelian
-                            </p>
-                        </a>
-                    </li>
-                </ul>
+                        <li class="nav-item">
+                            <a href="{{ url('/') }}" class="nav-link">
+                                <i class="nav-icon fas fa-home"></i>
+                                <p>
+                                    Dashboard
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url('profile') }}" class="nav-link">
+                                <i class="nav-icon fas fa-user"></i>
+                                <p>
+                                    Profile
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url('contact') }}" class="nav-link">
+                                <i class="nav-icon fas fa-address-book"></i>
+                                <p>
+                                    Contact
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url('produk') }}" class="nav-link">
+                                <i class="nav-icon fas fa-gift"></i>
+                                <p>
+                                    Produk
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url('barang') }}" class="nav-link">
+                                <i class="nav-icon fas fa-gift"></i>
+                                <p>
+                                    Barang
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url('pemasok') }}" class="nav-link">
+                                <i class="nav-icon fas fa-gift"></i>
+                                <p>
+                                    Pemasok
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url('pelanggan') }}" class="nav-link">
+                                <i class="nav-icon fas fa-gift"></i>
+                                <p>
+                                    Pelanggan
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url('user') }}" class="nav-link">
+                                <i class="nav-icon fas fa-gift"></i>
+                                <p>
+                                    User
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url('pembelian') }}" class="nav-link">
+                                <i class="nav-icon fas fa-gift"></i>
+                                <p>
+                                    Pembelian
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
             </div>
@@ -145,7 +147,7 @@
             <section class="content-header">
                 <div class="container-fluid">
                     <div class="row mb-2">
-                    <div class="col-sm-6">
+                        <div class="col-sm-6">
                             <h1></h1>
                         </div>
                         <div class="col-sm-6">
@@ -164,4 +166,4 @@
         </div>
         <!-- /.content-wrapper -->
 
-@include('templates.footer')
+        @include('templates.footer')
