@@ -11,6 +11,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{ asset('adminlte3') }}/plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.2.0/js/adminlte.min.js">
     <link rel="stylesheet" href="{{ asset('adminlte3') }}/dist/css/adminlte.min.css">
     <link rel="stylesheet" href="{{ asset('bootstrap') }}/css/bootstrap.min.css">
     <!-- <link rel="stylesheet" href="{{ asset('css/custom.css') }}"> -->
